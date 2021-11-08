@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/DStablas.js"></script>
+    <script type="text/javascript" src="./js/Funciones.js"></script>
+    <script type="text/javascript" src="./js/MetodosCRUD.js"></script>
+    <script type="text/javascript" src="./js/ObtenerInfo.js"></script>
+    <title>Reservation</title>
+
+
+</head>
+
+<body onload=" obtenerDatos('Computer'),obtenerDatos('Client')">
+    <div class="ui violet inverted fixed menu">
+        <a class="item" href="/Principal.html">
+            <i class="home icon"></i> Inicio
+        </a>
+        <a class="item" href="Category.html">
+            Categorias
+        </a>
+        <a class="item" href="Computer.html">
+           Computadores
+        </a>
+        <a class="item" href="Client.html">
+            Clientes
+        </a>
+        <a class="item" href="Message.html">
+            Mensajes
+        </a>
+        <a class="item" href="Reservation.html">
+            Reservaciones
+        </a>
+        <a class="item" href="Report.html">
+            Reportes
+        </a>
+    </div>
+
+    <div class="reserva">
+
+        <br><br><br><br>
+    </div>
+    <div class="ui divider"></div>
+    <div class="ui two column left aligned divided very relaxed stackable grid container">
+        <div class="row">
+            <div class="column" style="width: 30%;">
+                <h2>Registro de Reservaciones</h2>
+                <div class="ui form">
+                    <div class="field">
+                        <label>STARTDATE: Escoja la Fecha Inicio de la Reservacion</label>
+                        <label for="fechaIncio">Startdate</label>
+                        <input type="date" id="fechaIncio">
+                    </div>
+                    <div class="field">
+                        <label>DEVOLUTIONDATE: Escoja la Fecha Devolucion de la Reservacion</label>
+                        <label for="fechaFinal">Devolutiondate</label>
+                        <input type="date" id="fechaFinal">
+                    </div>
+                    <div class="field">
+                        <label>Estado de la Reservacion "completed / cancelled</label>
+                        <select id="status" aria-placeholder="completed o cancelled">
+                            <option value="completed">completed</option>
+                            <option value="cancelled">cancelled</option>
+                        </select>
+
+                    </div>
+
+                    <div class="field">
+                        <label for="client">Client</label>
+                        <select class="ui dropdown" id="re_Clientes"></select>
+                    </div>
+                    <div class="field">
+                        <label for="Computer">Computer</label>
+                        <select class="ui dropdown" id="re_Computer"></select>
+
+                    </div>
+                    <div id="botonesIzq">
+                        <button onclick="listar('Reservation')" class="ui violet button">Buscar</button>
+                        <button onclick="guardar('Reservation')" class="ui blue button">Guardar</button>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="column" style="width: 70%;">
+                <h2>Informe de Reservaciones</h2>
+                <table class="ui celled table">
+                    <div id="tablaReserva"></div>
+                    <span id="btnActualizar" style="display: none;"></span>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="ui grid container">
+        <div class="row">
+
+        </div>
+    </div>
+    <script>
+        $('select.dropdown')
+            .dropdown();
+    </script>
+</body>
+
+</html>

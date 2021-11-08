@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/Report.js"></script>
+    <title>Reportes</title>
+
+    <script src="js/Message.js"></script>
+
+</head>
+
+<body>
+    <div class="ui orange inverted fixed menu">
+        <a class="item" href="Principal.html">
+            <i class="home icon"></i> Inicio
+        </a>
+        <a class="item" href="Category.html">
+            Categorias
+        </a>
+        <a class="item" href="Computer.html">
+            Computadores
+        </a>
+        <a class="item" href="Client.html">
+            Clientes
+        </a>
+        <a class="item" href="Message.html">
+            Mensajes
+        </a>
+        <a class="item" href="Reservation.html">
+            Reservaciones
+        </a>
+        <a class="item" href="Report.html">
+            Reportes
+        </a>
+    </div>
+    <div class="reports">
+        <!--<h1 class="algo">Bienvenidos</h1>
+    <div class="ui stackable grid container centered">
+        <div class="ui text container">
+            <h1 class="ui header">Bienvenidos</h1>
+
+        </div>
+    </div>-->
+        <br><br><br><br>
+    </div>
+
+    <div class="ui divider"></div>
+
+    <div class="ui two column left aligned divided very relaxed stackable grid container">
+        <div class="row">
+            <div class="column" style="width: 30%;">
+                <h2>Reportes</h2>
+                <div class="ui form">
+                    <div class="field">
+                        <div class="ui search">
+                            <input type="date" id="RstarDate" placeholder="descripcion"><br><br>
+                            <input type="date" id="RdevolutionDate" placeholder="descripcion"><br><br>
+
+
+                        </div>
+                        <button onclick="traerReporteDate()" class="ui purple button"> Generar Reporte por fecha </button><br><br>
+                        <button onclick="traerReporteStatus()" class="ui green button"> Generar Reporte Status Reservas </button><br><br>
+                        <button onclick="traerReporteClientes()" class="ui orange button"> Generar Reporte Clientes y Cantidad de reservas por cliente </button><br>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="column" style="width:70%">
+                <h2>Informe Reportes</h2>
+                <div id="resultadoDate"></div>
+                <div id="resultadoStatus"></div>
+                <div id="resultadoClientes"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
